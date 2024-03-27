@@ -1,0 +1,39 @@
+.Navbar{
+    padding: 10px 2%;
+    justify-content: space-between;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: rgb(255, 255, 255);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.navleft .menu {
+    width: 22px;
+    margin-right: 25px;
+}
+.navleft .logo{
+    width: 130px;
+}
+.navmid .searh-box{
+ border: 1px solid #ccc;
+ margin-right: 15px;
+ padding: 8px 12px;
+ border-radius: 25px;
+}
+.navmid .searh-box input{
+    width: 400px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+}
+.navmid .search{
+    width: 15px;
+}
+.navright img{
+   width: 25px; 
+   margin-right: 25px;
+}
+.navright .user_profile{
+    width: 35px;
+    border-radius: 50%;
+}
