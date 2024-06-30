@@ -17,7 +17,7 @@ const Feed = ({cattegory}) => {
     const [data ,setData]=useState([])
 
 const fechData = async()=>{
-    const videoList_url =` https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxWidth=50&regionCode=EG&videoCategoryId=${cattegory}&key=${API_KEY} `
+    const videoList_url =` https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=EG&videoCategoryId=${cattegory}&key=${API_KEY} `
   await  fetch(videoList_url )
             .then(res=>res.json())
             .then(data=>setData(data.items))
@@ -35,12 +35,12 @@ fechData()
 
     {data.map((item,index)=>{
         return(
-        <Link to={`video/20/4654`} key={i.id} className="card">
-                <img src={thumbnail1} alt="" />
-                <h2>Lorem, ipsum dolor.</h2>
-                <h3>elsheshatwy</h3>
+        <Link to={`video/items.snippet.categoryId/${item.id}`}  className="card" key={index.Id}>
+                <img src={item.snippet.thumbnails.default.url} alt="" />
+                <h2>{item.snippet.title}</h2>
+                <h3>{item.snippet.channelTitle}</h3>
                 <p>15K views &bull ; 2days ago</p>
-            </Link>
+           </Link>
         )
         
 })}
@@ -63,12 +63,12 @@ fechData()
         <h3>elsheshatwy</h3>
         <p>15K views &bull ; 2days ago</p>
     </div> */}
-    <div className="card">
+    {/* <div className="card">
         <img src={thumbnail3} alt="" />
         <h2>Lorem, ipsum dolor.</h2>
         <h3>elsheshatwy</h3>
         <p>15K views &bull ; 2days ago</p>
-    </div>
+    </div> */}
 
   
    </div>
