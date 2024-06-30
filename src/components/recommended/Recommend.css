@@ -1,0 +1,25 @@
+.recommend{
+    flex-basis: 30%;
+    
+}
+.side-vd-list{
+    display: flex;
+    margin-bottom: 8px;
+    justify-content: space-between;
+}
+.side-vd-list img{
+    flex-basis: 49%;
+    width: 50%;
+}
+.vd-info{
+    flex-basis: 49%;
+}
+.vd-info h4{
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.vd-info p{
+    font-size: 13px;
+    font-weight: 300;
+    color: #393838;
+}
