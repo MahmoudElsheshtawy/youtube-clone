@@ -10,8 +10,9 @@ import thumbnail6 from "../../assets/thumbnail6.png"
 import thumbnail7 from "../../assets/thumbnail7.png"
 import thumbnail8 from "../../assets/thumbnail8.png"
 import { Link } from "react-router-dom"
-import { API_KEY } from "../../data"
+import { API_KEY, Count_value } from "../../data"
 import { useEffect, useState } from "react"
+import moment from "moment"
 
 const Feed = ({cattegory}) => {
     const [data ,setData]=useState([])
@@ -39,7 +40,7 @@ fechData()
                 <img src={item.snippet.thumbnails.default.url} alt="" />
                 <h2>{item.snippet.title}</h2>
                 <h3>{item.snippet.channelTitle}</h3>
-                <p>15K views &bull ; 2days ago</p>
+                <p>{Count_value(item.statistics.viewCount)} views . {moment(item.snippet.publishedAt).fromNow()}</p>
            </Link>
         )
         
