@@ -15,37 +15,37 @@ import cameron from "../../assets/cameron.png";
 import simon from "../../assets/simon.png";
 
 // eslint-disable-next-line react/prop-types
-const Sidebar = ({ sidebar }) => {
+const Sidebar = ({ sidebar ,cattegory,setCattegory}) => {
   console.log(sidebar);
   // if false "small"
   return (
     <div className={`sidebar ${sidebar ? "" : "small-sidebar"}`}>
       <div className="links">
-        <div className="sidelinks">
+        <div className={`sidelinks ${cattegory===0?"active":""}` }onClick={()=>setCattegory(0)}>
           <img src={home} alt="" /> <p>Home</p>
         </div>
-        <div className="sidelinks">
+        <div className={`sidelinks ${cattegory===20?"active":""}` }onClick={()=>setCattegory(20)}>
           <img src={game} alt="" /> <p>Gaming</p>
         </div>
-        <div className="sidelinks">
+        <div className={`sidelinks ${cattegory===2?"active":""}` }onClick={()=>setCattegory(2)}>
           <img src={automobiles} alt="" /> <p>Automobiles</p>
         </div>
-        <div className="sidelinks">
+        <div className={`sidelinks ${cattegory===17?"active":""}` } onClick={()=>setCattegory(17)}>
           <img src={sports} alt="" /> <p>Sports</p>
         </div>
-        <div className="sidelinks">
+        <div className={`sidelinks ${cattegory===24?"active":""}` } onClick={()=>setCattegory(24)}>
           <img src={entertainment} alt="" /> <p>Entertainment</p>
         </div>
-        <div className="sidelinks">
+        <div className={`sidelinks ${cattegory===28?"active":""}` } onClick={()=>setCattegory(28)}>
           <img src={tech} alt="" /> <p>Technology</p>
         </div>
-        <div className="sidelinks">
+        <div className={`sidelinks ${cattegory===10?"active":""}` } onClick={()=>setCattegory(10)}>
           <img src={music} alt="" /> <p>Music</p>
         </div>
-        <div className="sidelinks">
+        <div className={`sidelinks ${cattegory===22?"active":""}` } onClick={()=>setCattegory(22)}>
           <img src={blogs} alt="" /> <p>Blogs</p>
         </div>
-        <div className="sidelinks">
+        <div className={`sidelinks ${cattegory===25?"active":""}` } onClick={()=>setCattegory(25)}>
           <img src={news} alt="" /> <p>News</p>
         </div>
         <hr />

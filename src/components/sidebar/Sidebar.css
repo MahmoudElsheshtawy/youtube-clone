@@ -6,6 +6,8 @@ position: fixed;
 top: 0;
 padding-left:2% ;
 padding-top: 80px;
+/* transition: 1s ease-in; */
+
 
 }
 .links img{
@@ -38,14 +40,20 @@ margin-right: 20px;
 }
 .small-sidebar{
     width: 5%;
-    transition: 1s ease-in;
+    /* transition: .1s ease-in; */
 }
 .small-sidebar p {
     display: none;
+    /* transition: 1s ease-in; */
+
 }.small-sidebar h3{
     display: none;
 }
 .small-sidebar hr{
     width: 50%;
     margin-bottom: 25px;
+}
+.sidelinks.active img{
+    padding-bottom: 2px;
+    border-bottom: 3px solid red;
 }

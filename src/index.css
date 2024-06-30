@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
-    transition: 1s ease-in-out;
+    transition: .2s ease-in-out;
 }
 a{
     text-decoration: none;
