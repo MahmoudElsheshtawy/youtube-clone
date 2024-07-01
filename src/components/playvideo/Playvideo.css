@@ -97,24 +97,26 @@ margin-top: 20px;
     margin-top: 15px;
 
 }
-.comments{
+.comment{
     display: flex;
     align-items: flex-start;
+    /* align-items: center; */
     margin: 20px 0;
+    /* justify-content: center; */
 }
-.comments img{
+.comment img{
     width: 35px;
     border-radius: 50%;
     margin-right: 15px;
 
 }
-.comments h3{
+.comment h3{
 font-size: 14px ;
 margin-bottom: 2px;
 
 
 }
-.comments h3 span {
+.comment h3 span {
     font-size: 12px;
     color: #5a5a5a;
     font-weight: 500;

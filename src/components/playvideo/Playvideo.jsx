@@ -15,6 +15,7 @@ import moment from "moment/moment";
 const Playvideo = ({ videoId }) => {
   const [apidata, setApidata] = useState(null);
   const [somedata, setSomedata] = useState(null);
+  const [comment,setCommnt]=useState([])
   //fech info for chanal
   const fechapidata = async () => {
     try {
@@ -49,6 +50,24 @@ const Playvideo = ({ videoId }) => {
   useEffect(() => {
     fechsomedata();
   }, [apidata]);
+  // comment
+  const fetchComments = async () => {
+    try {
+      const response = await fetch(
+        `https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet%2Creplies&videoId=${videoId}&maxResults=10&key=${API_KEY}`
+      );
+      const data = await response.json();
+      setCommnt(data.items);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  useEffect(() => {
+    fetchComments();
+  }, []);
+
+  console.log(comment);
   return (
     <>
       <div className="play-video">
@@ -102,6 +121,27 @@ const Playvideo = ({ videoId }) => {
             {apidata ? Count_value(apidata.statistics.commentCount) : ""}{" "}
             Comments
           </h4>
+
+          {comment.map((item,index)=>{
+            return(
+              <div key={item.id} className="comment">
+                <img src={item.snippet.topLevelComment.snippet.authorProfileImageUrl} alt="" />
+                <div>
+                  <h3>
+                    {item.snippet.topLevelComment.snippet.authorDisplayName} <span>{item.snippet.topLevelComment.snippet.publishedAt}</span>
+                  </h3>
+                  <p>
+                    {item.snippet.topLevelComment.snippet.textDisplay}
+                  </p>
+                  <div className="comment-action">
+                    <img src={like} alt="" />
+                    <span>{item.snippet.topLevelComment.snippet.likeCount}</span>
+                    <img src={dislike} alt="" />
+                  </div>
+                </div>
+              </div>
+            )
+          })}
           <div className="comments">
             <img src={user_profile} alt="" />
             <div>
@@ -119,40 +159,8 @@ const Playvideo = ({ videoId }) => {
               </div>
             </div>
           </div>
-          <div className="comments">
-            <img src={user_profile} alt="" />
-            <div>
-              <h3>
-                Jack Awadns <span>1 day ago</span>{" "}
-              </h3>
-              <p>
-                dolor sit amet consectetur adipisicing elit. Nulla explicabo est
-                quis optio expedita.
-              </p>
-              <div className="comment-action">
-                <img src={like} alt="" />
-                <span>300</span>
-                <img src={dislike} alt="" />
-              </div>
-            </div>
-          </div>
-          <div className="comments">
-            <img src={user_profile} alt="" />
-            <div>
-              <h3>
-                Jack Awadns <span>1 day ago</span>{" "}
-              </h3>
-              <p>
-                dolor sit amet consectetur adipisicing elit. Nulla explicabo est
-                quis optio expedita.
-              </p>
-              <div className="comment-action">
-                <img src={like} alt="" />
-                <span>300</span>
-                <img src={dislike} alt="" />
-              </div>
-            </div>
-          </div>
+         
+          {/* </div> */}
         </div>
       </div>
     </>
