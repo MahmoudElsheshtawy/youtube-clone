@@ -7,8 +7,10 @@ import save from "../../assets/save.png";
 import { useEffect, useState } from "react";
 import { API_KEY, Count_value } from "../../data";
 import moment from "moment/moment";
+import { useParams } from "react-router-dom";
 
-const Playvideo = ({ videoId }) => {
+const Playvideo = () => {
+  const {videoId}=useParams()
   const [apidata, setApidata] = useState(null);
   const [somedata, setSomedata] = useState(null);
   const [comment,setCommnt]=useState([])
@@ -27,7 +29,7 @@ const Playvideo = ({ videoId }) => {
   // console.log(apidata);
   useEffect(() => {
     fechapidata();
-  }, []);
+  }, [videoId]);
   //  somedata kind of supscriper and some fetsher
   const fechsomedata = async () => {
     try {
@@ -60,7 +62,7 @@ const Playvideo = ({ videoId }) => {
 
   useEffect(() => {
     fetchComments();
-  }, []);
+  }, [comment]);
 
   // console.log(comment);
   return (

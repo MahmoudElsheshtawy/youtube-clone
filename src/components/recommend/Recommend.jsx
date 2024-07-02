@@ -3,6 +3,7 @@ import "./Recommend.css"
 
 import { API_KEY, Count_value } from "../../data"
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 // eslint-disable-next-line react/prop-types
 const Recommend = ({categoryId}) => {
 
@@ -35,7 +36,7 @@ useEffect(() =>{
     <div className="recommend">
         {apidata.map((item,index)=>{
             return(
-                <div className="side-vd-list" key={index}>
+                <Link to={`/video/${item.snippet.categoryId}/${item.id}`} className="side-vd-list" key={index}>
                     <img src={item.snippet.thumbnails.medium.url} alt="" />
                     <div className="vd-info">
                         
@@ -43,7 +44,7 @@ useEffect(() =>{
                         <p>{item.snippet.channelTitle}</p>
                         <p>{Count_value(item.statistics.viewCount)} views</p>
                     </div>
-                </div>
+                </Link>
             )
         })}
     

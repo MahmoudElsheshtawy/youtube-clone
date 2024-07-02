@@ -43,24 +43,6 @@ const Feed = ({ cattegory }) => {
         );
       })}
 
-      {/* <Link to={`video/20/4654`} className="card">
-        <img src={thumbnail1} alt="" />
-        <h2>Lorem, ipsum dolor.</h2>
-        <h3>elsheshatwy</h3>
-        <p>15K views &bull ; 2days ago</p>
-    </Link>
-    <div className="card">
-        <img src={thumbnail2} alt="" />
-        <h2>Lorem, ipsum dolor.</h2>
-        <h3>elsheshatwy</h3>
-        <p>15K views &bull ; 2days ago</p>
-    </div> */}
-      {/* <div className="card">
-        <img src={thumbnail3} alt="" />
-        <h2>Lorem, ipsum dolor.</h2>
-        <h3>elsheshatwy</h3>
-        <p>15K views &bull ; 2days ago</p>
-    </div> */}
     </div>
   );
 };
