@@ -1,5 +1,4 @@
 import "./Recommend.css"
-// import thumbnail1 from "../../assets/thumbnail1.png"
 
 import { API_KEY, Count_value } from "../../data"
 import { useEffect, useState } from "react"
@@ -24,14 +23,8 @@ const recomendapi =async()=>{
 useEffect(() =>{
     recomendapi();
 },[])
-// recomendapi()
 
-
-
-
-
-
-    console.log(categoryId);
+    // console.log(categoryId);
   return (
     <div className="recommend">
         {apidata.map((item,index)=>{

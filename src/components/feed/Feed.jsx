@@ -32,7 +32,7 @@ const Feed = ({ cattegory }) => {
             className="card"
             key={index}
           >
-            <img src={item.snippet.thumbnails.default.url} alt="" />
+            <img src={item.snippet.thumbnails.medium.url} alt="" />
             <h2>{item.snippet.title}</h2>
             <h3>{item.snippet.channelTitle}</h3>
             <p>
