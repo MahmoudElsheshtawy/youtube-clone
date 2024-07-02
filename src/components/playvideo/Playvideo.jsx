@@ -69,8 +69,8 @@ const Playvideo = () => {
     <>
       <div className="play-video">
         <iframe
-          src={`https://www.youtube.com/embed/${videoId}`}
-          frameBorder="0"
+          src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+    
         ></iframe>
         <h3>{apidata ? apidata.snippet.title : "on title"}</h3>
         <div className="play-video-info">
