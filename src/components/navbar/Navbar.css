@@ -21,13 +21,13 @@
  border-radius: 25px;
 }
 .navmid .searh-box input{
-    width: 400px;
+   width: 300px;
     border: 0;
     outline: 0;
     background: transparent;
 }
 .navmid .search{
-    width: 15px;
+    width: 14px;
 }
 .navright img{
    width: 25px; 
@@ -36,4 +36,34 @@
 .navright .user_profile{
     width: 35px;
     border-radius: 50%;
+}
+@media screen and (max-width:900px){ 
+    .navright img{
+        display: none;
+    }
+.navright .user_profile{
+    display: block;
+}
+.navmid .searh-box input{
+    width: 100px;
+}
+.menu{
+    display: none;
+}
+.navleft .logo{
+    width: 100px;
+}
+.navmid .searh-box{
+    border: 1px solid #ccc;
+    margin-right: 15px;
+    padding: 3px 9px;
+    border-radius: 25px;
+   }
+   .navmid .search{
+    width: 13px;
+}
+.navright .user_profile{
+    width: 25px;
+    border-radius: 50%;
+}
 }

@@ -62,7 +62,7 @@ const Playvideo = () => {
 
   useEffect(() => {
     fetchComments();
-  }, [comment]);
+  }, []);
 
   // console.log(comment);
   return (

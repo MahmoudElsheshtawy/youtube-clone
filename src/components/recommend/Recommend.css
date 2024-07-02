@@ -23,3 +23,11 @@
     font-weight: 300;
     color: #393838;
 }
+@media screen and (max-width:900px){ 
+
+.recommend{
+    flex-basis: 100%;
+}
+
+
+}

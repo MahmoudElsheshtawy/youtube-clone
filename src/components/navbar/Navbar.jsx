@@ -15,7 +15,9 @@ const Navbar = ({setSidebar}) => {
   return (
     <>
       <div className="Navbar flex">
+      
         <div className="navleft flex">
+    
           <img onClick={()=>setSidebar(prve=> prve ===false?true :false)} className="menu" src={menu_icon} alt="" />
           <Link to={"/"}><img className="logo" src={logo} alt="" /></Link>
         </div>

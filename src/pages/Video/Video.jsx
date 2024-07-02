@@ -7,7 +7,7 @@ const Video = () => {
 
 
   const {videoId,categoryId}= useParams()
-  // console.log(videoId,categoryId)
+  console.log(videoId,categoryId)
 
 
   return (

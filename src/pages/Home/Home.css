@@ -9,3 +9,11 @@
     padding-left:7% ;
    
 }
+@media screen and (max-width:900px){ 
+ .lage-container , .container{
+    padding-left: 5%;
+    padding-right: 5%;
+ }
+
+
+}
