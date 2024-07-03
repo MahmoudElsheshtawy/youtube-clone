@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 // eslint-disable-next-line react/prop-types
 const Recommend = ({categoryId}) => {
 
-    const [apidata,setApidata]=useState([])
+    const [api_data,setApidata]=useState([])
 
 const recomendapi =async()=>{
 
@@ -27,7 +27,7 @@ useEffect(() =>{
     // console.log(categoryId);
   return (
     <div className="recommend">
-        {apidata.map((item,index)=>{
+        {api_data.map((item,index)=>{
             return(
                 <Link to={`/video/${item.snippet.categoryId}/${item.id}`} className="side-vd-list" key={index}>
                     <img src={item.snippet.thumbnails.medium.url} alt="" />

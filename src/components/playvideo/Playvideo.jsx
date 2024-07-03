@@ -11,6 +11,7 @@ import { useParams } from "react-router-dom";
 
 const Playvideo = () => {
   const {videoId}=useParams()
+  // console.log(videoId);
   const [apidata, setApidata] = useState(null);
   const [somedata, setSomedata] = useState(null);
   const [comment,setCommnt]=useState([])
@@ -62,14 +63,14 @@ const Playvideo = () => {
 
   useEffect(() => {
     fetchComments();
-  }, []);
+  }, [comment]);
 
   // console.log(comment);
   return (
     <>
       <div className="play-video">
         <iframe
-          src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+          src={`https://www.youtube.com/embed/${videoId}`}
     
         ></iframe>
         <h3>{apidata ? apidata.snippet.title : "on title"}</h3>
