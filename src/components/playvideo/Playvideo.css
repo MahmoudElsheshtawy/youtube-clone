@@ -145,6 +145,7 @@ font-size: 14px;
 @media screen and (max-width:900px){ 
     .play-video{
         flex-basis: 100%;
+        /* background-color: aqua; */
 
     }
     .play-video iframe{
@@ -158,6 +159,16 @@ font-size: 14px;
         margin-left: 0;
         margin-right: 15px;
         margin-top: 15px;
+    }
+    .publisher button{
+        background: red;
+        color: #fff;
+        padding: 7px 20px;
+        border: 0;
+        outline: 0;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-right: 10px;
     }
 }
 
