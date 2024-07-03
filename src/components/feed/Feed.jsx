@@ -28,7 +28,8 @@ const Feed = ({ cattegory }) => {
       {data.map((item, index) => {
         return (
           <Link
-            to={`video/${item.snippet.categoryId}/${item.id}`}
+          // item.snippet.categoryId
+            to={`video/${17}/${item.id}`}
             className="card"
             key={index}
           >
